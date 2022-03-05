@@ -1,7 +1,9 @@
-ARG ARCH_TAG
+ARG ARCH_TAG=x1164
 
-FROM seancheung/alpinewine:wine$ARCH_TAG
-LABEL maintainer="Sean Cheung <theoxuanx@gmail.com>"
+FROM seancheung/alpinewine:$ARCH_TAG
+LABEL maintainer="hoitaku"
+
+ENV SCREEN="0 1280x1024x24"
 
 RUN set -ex && \
     echo "Installing dependencies..." && \
